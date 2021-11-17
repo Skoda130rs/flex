@@ -29,7 +29,7 @@ const loadEvent = function() {
     console.log(generateArray([2]));
 */
 const root = document.getElementById("root");
-const list = generateArray(25);
+const list = generateArray(250);
 
 // Begin of Make string with plus "0"s before the number
 
@@ -71,7 +71,7 @@ length = (list.length-1);
 
 if (list[0] !== "error") {
     for (const item of list){
-        root.insertAdjacentHTML("beforeend", `<div>${item}</div>`);
+        root.insertAdjacentHTML("beforeend", `<div class="card">${item}</div>`);
     } 
 }
 }

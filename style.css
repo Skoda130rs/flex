@@ -16,10 +16,37 @@ select{appearance: none !important; -webkit-appearance: none !important; border-
 #root {
     display: flex;
     flex-wrap: wrap;
-    height: 100vh;
+    margin: 80px auto;
+    padding: 40px;
+    height: 20vh;
 /*    flex-direction: column;*/
+    grid-gap: 40px;
     justify-content: center;
     align-items: center;
 }
-
+.card {
+    background-color: rgb(237, 245, 128);
+    padding: 40px;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(112, 92, 4);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    
+}
+/*
+#root {
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 80px auto;
+    padding: 40px;
+    
+    background-color: #efefef;
+  
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+  }
+*/
 
