@@ -29,62 +29,45 @@ const loadEvent = function() {
     console.log(generateArray([2]));
 */
 const root = document.getElementById("root");
-const list = generateArray(250);
+//const list = generateArray(14);
+const list = generateArray(1400);
+    length = (list.length-1);
 
 // Begin of Make string with plus "0"s before the number
 
-length = (list.length-1);
+    let zero = 0;
+    let ten = 10;
+
     if(list[length].toString().length === 1){
         list[j]=list[j].toString();
 
     }else if(list[length].toString().length === 2){
-        for (let k=0; k<10; k++){
- 
-            list[k]="0"+list[k].toString();
-
-        }
+        fors (zero, ten, string);
 
     }else if(list[length].toString().length === 3){
-        for (let k=0; k<10; k++){
-            list[k]="00"+list[k].toString();
-        }
-        for (let k=11; k<100; k++){
-            list[k]="0"+list[k].toString();
-        }
-
+        fors (ten, ten*10, "0");
+        fors (zero, ten, "00");
+        
     }else if(list[length].toString().length === 4){
-        for (let k=0; k<10; k++){
-            list[k]="000"+list[k].toString();
-        }
-        for (let k=11; k<100; k++){
-            list[k]="00"+list[k].toString();
-
-        }
-        for (let k=101; k<1000; k++){
-            list[k]="0"+list[k].toString();
-        }
-
+        fors (ten*10, ten*100, "0");
+        fors (ten, ten*10, "00");
+        fors (zero, ten, "000");
     }else {
         let error = "4-nél több számjegy van";
     }
-// End of Make string with plus "0"s before the number
+
+// End of Make string with plus "0"s before the number*/
 
 if (list[0] !== "error") {
     for (const item of list){
         root.insertAdjacentHTML("beforeend", `<div class="card">${item}</div>`);
     } 
 }
+function fors (from, till, zeros){
+    for (let k=from; k<till; k++){
+        list[k]=zeros+list[k].toString();
+    }
+} 
 }
 
-
 window.addEventListener("load", loadEvent);
-
-/*
-window.addEventListener("load", function(){
-    ez ugyanaz, mint a fenti
-})
-
-window.addEventListener("load", () => {
-    ez ugyanaz, mint a fenti
-})
-*/
