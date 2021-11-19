@@ -30,44 +30,29 @@ const loadEvent = function() {
 */
 const root = document.getElementById("root");
 //const list = generateArray(14);
-const list = generateArray(1400);
+const list = generateArray(11250);
+
     length = (list.length-1);
 
-// Begin of Make string with plus "0"s before the number
+// ********** Begin of Make string with plus "0"s before the number
 
-    let zero = 0;
-    let ten = 10;
+    let digits = "";
+    let diff= 0 ;
+    let zero="0"
+    digits=(list.length-1).toString().length;
 
-    if(list[length].toString().length === 1){
-        list[j]=list[j].toString();
-
-    }else if(list[length].toString().length === 2){
-        fors (zero, ten, string);
-
-    }else if(list[length].toString().length === 3){
-        fors (ten, ten*10, "0");
-        fors (zero, ten, "00");
-        
-    }else if(list[length].toString().length === 4){
-        fors (ten*10, ten*100, "0");
-        fors (ten, ten*10, "00");
-        fors (zero, ten, "000");
-    }else {
-        let error = "4-nél több számjegy van";
+    for (const item of list){
+        diff = digits - list[item].toString().length;
+        list[item]=zero.repeat(diff) + list[item].toString();
     }
 
-// End of Make string with plus "0"s before the number*/
+// ********** End of Make string with plus "0"s before the number*/
 
 if (list[0] !== "error") {
     for (const item of list){
         root.insertAdjacentHTML("beforeend", `<div class="card">${item}</div>`);
     } 
 }
-function fors (from, till, zeros){
-    for (let k=from; k<till; k++){
-        list[k]=zeros+list[k].toString();
-    }
-} 
 }
 
 window.addEventListener("load", loadEvent);
