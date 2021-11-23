@@ -32,19 +32,17 @@ const root = document.getElementById("root");
 //const list = generateArray(14);
 const list = generateArray(11250);
 
-    length = (list.length-1);
-
 // ********** Begin of Make string with plus "0"s before the number
 
-    let digits = "";
-    let diff= 0 ;
-    let zero="0"
-    digits=(list.length-1).toString().length;
+let digits = 0;
+let diff= 0 ;
+let zero="0";
+digits=(list.length-1).toString().length;
 
-    for (const item of list){
+for (const item of list){
         diff = digits - list[item].toString().length;
         list[item]=zero.repeat(diff) + list[item].toString();
-    }
+}
 
 // ********** End of Make string with plus "0"s before the number*/
 
